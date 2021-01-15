@@ -10,7 +10,15 @@ Và vấn đề là làm sao để thúc đẩy nhanh vòng lặp này, việc l
 <img src ='https://i.imgur.com/ExTH607.jpg'>
 
 Thời xưa, khi dữ liệu chưa nhiều, ta có thể chia dữ liệu thành train/ test theo tỷ lệ 70/30; hoặc train/dev/test thành 60/20/20.   
-Nhưng khi dữ liệu thu thập được lờn (>1.000.000, ...) thì việc chia tách nên cân nhắc lại có thể là 99/ 0.5/0.5 là đã ok rồi. 
+Nhưng khi dữ liệu thu thập được lớn (>1.000.000, ...) thì việc chia tách nên cân nhắc lại có thể là 99/ 0.5/0.5 là đã ok rồi. 
 Dẫu nguồn dữ liệu rất nhiều nhưng ML vẫn ở trong 1 cơn đói về dữ liệu, và dữ liệu sẽ được tập hợp từ nhiều nguồn khác nhau --> các phân phối sẽ khác nhau.   
 Việc đào tạo mô hình ML phải lưu ý tập dev/ test phải đến từ 1 phân phối!!!!
+
+## Lỗi bias hay lỗi variance?
+Cho rằng: Lỗi bayer (lỗi không thể tránh khỏi, như tập ảnh mờ quá không thể nhìn ra) = Lỗi con người = 0
+Ta có:   
+Khoảng cách giữa lỗi tập train và lỗi bayer là lỗi bias.   
+Khoảng cách giữa lỗi tập test và tập train là lỗi variance.  
+
+
 
