@@ -39,8 +39,13 @@ Không, ví dụ: Việc bạn có một mô hình với dữ liệu lớn, đư
 ## L2 Regularization
    1. Ta xem cụ thể L2- regularization là như thế nào?   
    <img src ='https://i.imgur.com/1AKqeKb.jpg'>   
-   Ta thêm vào hàm mất mát 1 lượng lambd/(2 x m) x numpy.linalg.norm(W)   
-   Việc thêm Frobenius norm của ma trận W này --> khi truyền ngược, việc cập nhật W sẽ giảm (lambd * anpha/ m) --> việc suy giảm trọng số này --> hàm Z = Wx A +b gần 0 hơn --> các hàm kích hoạt tuyến tính hơn (khi Z gần 0, các hàm sigmoi, tanh thường gần tuyến tính) --> cho ta cảm giác mô hình bớt phức tạp hơn, và có vẻ sẽ gần tuyến tính hơn --> giảm được sự quá khớp xảy ra.
+   Ta thêm vào hàm mất mát 1 lượng lambd/(2 x m) x numpy.linalg.norm(W)        
+   --> Việc thêm Frobenius norm của ma trận W này      
+   --> khi truyền ngược, việc cập nhật W sẽ giảm (lambd * anpha/ m)        
+   --> việc suy giảm trọng số này --> hàm Z = Wx A +b gần 0 hơn   
+   --> các hàm kích hoạt tuyến tính hơn (khi Z gần 0, các hàm sigmoi, tanh thường gần tuyến tính)   
+   --> cho ta cảm giác mô hình bớt phức tạp hơn, và có vẻ sẽ gần tuyến tính hơn      
+   --> giảm được sự quá khớp xảy ra.
 
 
 
