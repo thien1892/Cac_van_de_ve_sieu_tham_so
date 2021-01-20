@@ -32,7 +32,15 @@ Câu hỏi đặt ra:
 **Nếu bạn có mô hình chỉ lỗi bias cao thì việc lấy thêm dữ liệu có ý nghĩa lớn hay ko?**   
 Lấy thêm dữ liệu có ý nghĩa cho lỗi variance, trong trường hợp nay nên ưu tiên việc khác ngoài lấy thêm dữ liệu :))   
 **Liệu có phải đánh đổi giữa lỗi bias và lỗi variace hay không? việc giảm lỗi bias thì có tăng lỗi variace và ngược lại?**  
-Việc bạn có một mô hình với dữ liệu lớn, được regalarization tốt, được đào tạo một NN lớn phù hợp thì sẽ không phải đánh đổi giữa 2 lỗi này.  
+Không, ví dụ: Việc bạn có một mô hình với dữ liệu lớn, được regularization tốt, được đào tạo một NN lớn phù hợp thì sẽ không phải đánh đổi giữa 2 lỗi này.
+
+# Regularization
+   Có 2 cách regularization thường được sử dụng là L2 - Regularization và Dropout.   
+## L2 Regularization
+   1. Ta xem cụ thể L2- regularization là như thế nào?   
+   <img src ='https://i.imgur.com/1AKqeKb.jpg'>   
+   Ta thêm vào hàm mất mát 1 lượng lambd/(2 x m) x numpy.linalg.norm(W)   
+   Việc thêm Frobenius norm của ma trận W này --> khi truyền ngược, việc cập nhật W sẽ giảm (lambd * anpha/ m) --> việc suy giảm trọng số này --> hàm Z = Wx A +b gần 0 hơn --> các hàm kích hoạt tuyến tính hơn (khi Z gần 0, các hàm sigmoi, tanh thường gần tuyến tính) --> cho ta cảm giác mô hình bớt phức tạp hơn, và có vẻ sẽ gần tuyến tính hơn --> giảm được sự quá khớp xảy ra.
 
 
 
