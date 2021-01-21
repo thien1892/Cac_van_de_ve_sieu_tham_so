@@ -37,7 +37,7 @@ Không, ví dụ: Việc bạn có một mô hình với dữ liệu lớn, đư
 # Regularization
    Có 2 cách regularization thường được sử dụng là L2 - Regularization và Dropout.   
 ## L2 Regularization
-   1. Ta xem cụ thể L2- regularization là như thế nào?   
+   Ta xem cụ thể L2- regularization là như thế nào?   
    <img src ='https://i.imgur.com/1AKqeKb.jpg'>   
    Ta thêm vào hàm mất mát 1 lượng lambd/(2 x m) x numpy.linalg.norm(W)        
    --> Việc thêm Frobenius norm của ma trận W này khi truyền ngược, việc cập nhật W sẽ giảm (lambd * anpha/ m)        
@@ -45,6 +45,16 @@ Không, ví dụ: Việc bạn có một mô hình với dữ liệu lớn, đư
    --> các hàm kích hoạt tuyến tính hơn (khi Z gần 0, các hàm sigmoi, tanh thường gần tuyến tính)   
    --> cho ta cảm giác mô hình bớt phức tạp hơn, và có vẻ sẽ gần tuyến tính hơn      
    --> giảm được sự quá khớp xảy ra.
+
+## Dropout Regularization   
+   <img src = 'https://i.imgur.com/oQRoz2D.jpg'>   
+   Trực quan thì dropout là việc tắt ngẫu nhiêu một số nút ở một lớp bất kỳ --> việc tắt các nút làm giảm Frobenius norm của ma trận W, giống như L2, thay vì giảm theo 1 tỷ lệ cập nhật thì dropout tắt hẳn.   
+   Ví dụ, ta tắt ngẫu nhiên 20% số nút ở lớp 3, ta làm như sau:   
+   <img src ='https://i.imgur.com/FyMKRqu.jpg'>   
+   Sau khi tắt một số nút, ta cập nhật lại a3 = a3 / 0.8 --> không ảnh hưởng tới việc tính toán về sau.    
+   Lưu ý, với tập test ta không sử dụng lại dropout. Dropout không đưa lại cho ta cảm giác rõ ràng về hàm mất mát như L2. Dropout thường được sủ dụng nhiều trong thị giác máy tính. 
+
+
 
 
 
