@@ -59,6 +59,7 @@ Không, ví dụ: Việc bạn có một mô hình với dữ liệu lớn, đư
 <img src ='https://i.imgur.com/h1tgcGT.jpg'>   
 Ưu điểm: lửa chọn nhanh để tránh quá khớp.   
 Nhược điểm: Việc dừng sớm làm 1 lúc 2 công việc (tối ưu hóa hàm mất mát, tránh quá khớp) --> những việc ta làm để tối ưu hóa ko được triệt để (vd: ta ko thể chọn hàm mất mát nhỏ nhất mà thuật toán của ta đang thực hiện)   
+    
 2. Tăng cường dữ liệu:   
 Ví dụ bạn đang đào tạo thuật toán nhận dạng mèo, nhưng ít dữ liệu có thể thêm dữ liệu bằng cách: xoay ảnh, cắt ảnh,.... --> để tăng dữ liệu 1 cách ít tốn chi phí.
 
@@ -91,7 +92,7 @@ x1, x2 = 1 khi đó ở lớp L, a[l] = 0.5 ^L --> với các mạng càng sâu 
 Ý tưởng bắt đầu từ d(theta) = (J(theta +epsilon) - J(theta - epsilon)) / (2 x epsilon)
 --> việc kiểm tra gradient được thực hiện theo công thức trên ảnh.   
 Lưu ý:     
-  
+
 + Grard checking chỉ nên kiểm tra ở thời điểm gỡ lỗi, không nên kiểm tra trong lúc train.  
 
 + Nếu thấy lỗi grard check nên kiểm tra từng thành phần và xác định lỗi (theta bao gồm w, b --> kiểm tra db, dw có lỗi ko?)    
