@@ -86,6 +86,21 @@ x1, x2 = 1 khi đó ở lớp L, a[l] = 0.5 ^L --> với các mạng càng sâu 
             
 + w = np.random.randn(shape).np.sqrt(1/n[l-1]) hoặc w = np.random.randn(shape).np.sqrt(2/(n[l-1] X n[l])), với hàm tanh.
 
+# Kiểm tra gradient:
+<img src ='https://i.imgur.com/EFINDgY.jpg'>   
+Ý tưởng bắt đầu từ d(theta) = (J(theta +epsilon) - J(theta - epsilon)) / (2 x epsilon)
+--> việc kiểm tra gradient được thực hiện theo công thức trên ảnh.   
+Lưu ý:   
++ Grard checking chỉ nên kiểm tra ở thời điểm gỡ lỗi, không nên kiểm tra trong lúc train.   
++ Nếu thấy lỗi grard check nên kiểm tra từng thành phần và xác định lỗi (theta bao gồm w, b --> kiểm tra db, dw có lỗi ko?)  
++ Nếu có L2 hãy chắc J() được tính chính xác khi có L2   
++ Không thực hiện với Dropout   
++ Hãy thực khởi tạo lại tham số xấp xỉ 0 và làm lại.
+
+
+
+
+
 
 
 
