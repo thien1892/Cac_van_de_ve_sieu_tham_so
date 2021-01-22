@@ -52,7 +52,26 @@ Không, ví dụ: Việc bạn có một mô hình với dữ liệu lớn, đư
    Ví dụ, ta tắt ngẫu nhiên 20% số nút ở lớp 3, ta làm như sau:   
    <img src ='https://i.imgur.com/FyMKRqu.jpg'>   
    Sau khi tắt một số nút, ta cập nhật lại a3 = a3 / 0.8 --> không ảnh hưởng tới việc tính toán về sau.    
-   Lưu ý, với tập test ta không sử dụng lại dropout. Dropout không đưa lại cho ta cảm giác rõ ràng về hàm mất mát như L2. Dropout thường được sủ dụng nhiều trong thị giác máy tính. 
+   Lưu ý, với tập test ta không sử dụng lại dropout. Dropout không đưa lại cho ta cảm giác rõ ràng về hàm mất mát như L2. Dropout thường được sủ dụng nhiều trong thị giác máy tính.
+
+## Một số cách Regularization khác.  
+1. Dừng sớm   
+<img src ='https://i.imgur.com/h1tgcGT.jpg'>   
+Ưu điểm: lửa chọn nhanh để tránh quá khớp.   
+Nhược điểm: Việc dừng sớm làm 1 lúc 2 công việc (tối ưu hóa hàm mất mát, tránh quá khớp) --> những việc ta làm để tối ưu hóa ko được triệt để (vd: ta ko thể chọn hàm mất mát nhỏ nhất mà thuật toán của ta đang thực hiện)   
+2. Tăng cường dữ liệu:   
+Ví dụ bạn đang đào tạo thuật toán nhận dạng mèo, nhưng ít dữ liệu có thể thêm dữ liệu bằng cách: xoay ảnh, cắt ảnh,.... --> để tăng dữ liệu 1 cách ít tốn chi phí.
+
+# Chuẩn hóa đầu vào:
+1. Trực quan:  
+<img src = 'https://i.imgur.com/LD9rpOJ.jpg'>
+   Sau khi chuẩn hóa đầu vào x = (x - mu) / sigma ta đưa đầu vào về phương sai = 1. Lưu ý tập dev và test có cùng mu, sigma.   
+
+2. Tai sao chuẩn hóa đầu vào làm cho việc tối ưu hóa hàm mất mát J nhanh hơn?   
+<img src = 'https://i.imgur.com/ltrDEs5.jpg'>   
+Chúng ta xem hình ảnh trực quan sau khi chuẩn hóa --> các bước gradient sẽ nhanh hơn khi ở các vòng tròn đồng tâm --> việc tính toán sẽ nhanh hơn khi chưa chuẩn hóa.
+
+
 
 
 
