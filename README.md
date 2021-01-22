@@ -89,7 +89,7 @@ x1, x2 = 1 khi đó ở lớp L, a[l] = 0.5 ^L --> với các mạng càng sâu 
 
 # Kiểm tra gradient:
 <img src ='https://i.imgur.com/EFINDgY.jpg'>   
-Ý tưởng bắt đầu từ d(theta) = (J(theta +epsilon) - J(theta - epsilon)) / (2 x epsilon)
+Ý tưởng bắt đầu từ d(theta) xấp xỉ = (J(theta +epsilon) - J(theta - epsilon)) / (2 x epsilon)
 --> việc kiểm tra gradient được thực hiện theo công thức trên ảnh.   
 Lưu ý:     
 
