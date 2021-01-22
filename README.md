@@ -71,6 +71,21 @@ Ví dụ bạn đang đào tạo thuật toán nhận dạng mèo, nhưng ít d�
 <img src = 'https://i.imgur.com/ltrDEs5.jpg'>   
 Chúng ta xem hình ảnh trực quan sau khi chuẩn hóa --> các bước gradient sẽ nhanh hơn khi ở các vòng tròn đồng tâm --> việc tính toán sẽ nhanh hơn khi chưa chuẩn hóa.
 
+# Khởi tạo tham số   
+1. Sự bùng nổ và biến mất của gradient   
+Ví dụ với một NN đơn giản:   
+<img src ='https://i.imgur.com/BdVgbtR.jpg'>   
+x1, x2 = 1 khi đó ở lớp L, a[l] = 0.5 ^L --> với các mạng càng sâu việc biến mất hay bùng nổ của gradient sẽ xảy ra khi W >I hoắc W< I.   
+Để tránh bùng nổ hay biến mất gradient, ta có thể chọn cách khởi tạo tham số để hạn chế việc bùng nổ hay bieensmaats của gradient.   
+2. Khởi tạo tham số:   
+<img src ='https://i.imgur.com/jD1sABs.jpg'>   
+Để z không bùng nổ hay biến mất, thì với n ( số nút ẩn) càng lớn, ta muốn w càng nhỏ --> ta chọn w có var = 2/n, và khơi tạo:   
+w = np.random.randn(shape).np.sqrt(2/n[l-1]), với hàm relu   
+w = np.random.randn(shape).np.sqrt(1/n[l-1]) hoặc w = np.random.randn(shape).np.sqrt(2/(n[l-1] X n[l])), với hàm tanh.
+
+
+
+
 
 
 
