@@ -80,8 +80,10 @@ x1, x2 = 1 khi đó ở lớp L, a[l] = 0.5 ^L --> với các mạng càng sâu 
 
 2. Khởi tạo tham số:       
 <img src ='https://i.imgur.com/jD1sABs.jpg'>   
-Để z không bùng nổ hay biến mất, thì với n ( số nút ẩn) càng lớn, ta muốn w càng nhỏ --> ta chọn w có var = 2/n, và khơi tạo:      
-+ w = np.random.randn(shape).np.sqrt(2/n[l-1]), với hàm relu         
+Để z không bùng nổ hay biến mất, thì với n ( số nút ẩn) càng lớn, ta muốn w càng nhỏ --> ta chọn w có var = 2/n, và khơi tạo:   
+
++ w = np.random.randn(shape).np.sqrt(2/n[l-1]), với hàm relu
+            
 + w = np.random.randn(shape).np.sqrt(1/n[l-1]) hoặc w = np.random.randn(shape).np.sqrt(2/(n[l-1] X n[l])), với hàm tanh.
 
 
