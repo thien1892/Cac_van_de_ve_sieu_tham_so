@@ -10,3 +10,7 @@
 <img src = "https://i.imgur.com/N5p3fD7.jpg">   
 - Qua từng lần lặp, hàm mất mát J có xu hường giảm dần như sau:  
 <img src ="https://i.imgur.com/49zsQ2J.jpg">  
+
+#ADAM (Adaptive moment estimation)
+- Trực quan của ADAM là kết hợp cùng lúc 2 cách tăng tốc độ tính toán gradient descent của trung bình động (tăng tốc chiều ngang) và RMSprop (tăng tốc chiều ngang và chiều dọc). Cụ thể như sau:  
+<img src ='https://i.imgur.com/obSHDkJ.jpg'>
