@@ -3,4 +3,10 @@
 - ADAM (kết hợp gradient descent with momentum và RMSprop)
 # Cách giảm suy giảm tỷ lệ học tập?  
 
-1. Mini-batch gradient
+# Mini-batch gradient  
+- Là cách chia tập train thành các nhóm nhỏ gồm 64 (2^6), 128 (2^7), 256 (2^8), 512 (2^9 hoặc 1024 (2^10) mẫu.
+- Đối với mỗi vòng lặp qua các nhóm nhỏ, cập nhật tham số qua từng lần lặp lại. Mỗi lần lặp lại qua tập train được gọi là 1 epoch.
+- Ta xem 1 vòng lặp qua từng mini-batch làm những gì?  
+<img src = "https://i.imgur.com/N5p3fD7.jpg">   
+- Qua từng lần lặp, hàm mất mát J có xu hường giảm dần như sau:  
+<img src ="https://i.imgur.com/49zsQ2J.jpg">  
