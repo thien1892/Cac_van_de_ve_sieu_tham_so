@@ -13,4 +13,14 @@
 
 # ADAM (Adaptive moment estimation)
 - Trực quan của ADAM là kết hợp cùng lúc 2 cách tăng tốc độ tính toán gradient descent của trung bình động (tăng tốc chiều ngang) và RMSprop (tăng tốc chiều ngang và chiều dọc). Cụ thể như sau:  
-<img src ='https://i.imgur.com/obSHDkJ.jpg'>
+<img src ='https://i.imgur.com/obSHDkJ.jpg'>  
+
+- Các siêu tham số lựa chọn: anpha (cần điều chỉnh); beta1 = 0.9; beta2 = 0.999;  epsilon = 10^-8
+
+# Suy giảm tỷ lệ học tập
+- Tại sao cần giảm tỷ lệ học tập? Lúc ban đầu để tham số nhanh chóng đến điểm cực tiểu ta có thể để tỷ lệ học tập lớn nhưng khi tham số gần điểm cực tiểu ta cần tỷ lệ nhỏ để nó hội tụ quanh điểm cực tiểu này.
+- Các cách giảm tỷ lệ học tập:  
+- anpha = 1/(1+ decay rate * epoch_num) X anpha0   
+- anpha = 0.95^(epoch_num) X anpha0
+- anpha = k/ np.sqrt(epoch_num) x anpha0
+- giảm thủ công.
