@@ -20,8 +20,12 @@ Ví dụ: Bạn cần thử 2 siêu tham số anpha và epsilon:
 Khi bạn thử nghiệm các siêu tham số hãy khoanh vùng giá trị cho kết quả tốt và tiếp tục thử nghiệm để khoanh vùng cho kết quả tốt để lựa chọn siêu tham số. Ví dụ ta đã đi từ vùng lớn đến vùng nhỏ hơn trên ảnh.  
 
 3. **Hãy sử dụng thang đo thích hợp**   
-Với số Layer bạn có thể chọn 2,3,4,... nhưng ví dụ với anpha thì sao? Nếu bạn cho rằng anpha sẽ nằm trong khoảng 0.0001 đến 1? Nếu bạn chọn ngẫu nhiên, sẽ rao sao nếu anpha chỉ tập trung vào khoảng 0.1 đến 1? Hãy xem cách chọn thang đo cho anpha:  
+**VD1:** Với số Layer bạn có thể chọn 2,3,4,... nhưng ví dụ với anpha thì sao? Nếu bạn cho rằng anpha sẽ nằm trong khoảng 0.0001 đến 1? Nếu bạn chọn ngẫu nhiên, sẽ rao sao nếu anpha chỉ tập trung vào khoảng 0.1 đến 1? Hãy xem cách chọn thang đo cho anpha:  
 <img src ='https://i.imgur.com/SMLbGgC.jpg'>  
-Ở ví dụ trên, ta thực hiện 2 bước: chọn r ngẫu nhiên thuộc (-4, 0), sau đó chọn anpha = 10^ r. Việc lựa chọn như vậy khiến anpha trải đều hơn và tránh việc tập trung vào 1 khoảng không mong muốn.
+Ở ví dụ trên, ta thực hiện 2 bước: chọn r ngẫu nhiên thuộc (-4, 0), sau đó chọn anpha = 10^ r. Việc lựa chọn như vậy khiến anpha trải đều hơn và tránh việc tập trung vào 1 khoảng không mong muốn.   
+
+**VD2:** Ta hãy xem cách chọn beta (khi sử dụng trung bình động gradient descent):   
+<img src= 'https://i.imgur.com/d9HrOJ4.jpg'>   
+Khi chọn beta = 0.9000 đến beta = 0.9005 sẽ không có nhiều thay đổi, nhưng nếu beta = 0.999 đến 0.9995 thì sẽ ảnh hưởng lớn đến kết quả vì bạn đang thay đổi xem kết quả cuối cùng phụ thuộc vào 2000 giá trị trước thay vì 1000 giá trị trước đó.
 
 
