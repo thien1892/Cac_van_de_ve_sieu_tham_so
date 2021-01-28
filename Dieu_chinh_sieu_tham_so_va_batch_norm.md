@@ -20,5 +20,8 @@ Ví dụ: Bạn cần thử 2 siêu tham số anpha và epsilon:
 Khi bạn thử nghiệm các siêu tham số hãy khoanh vùng giá trị cho kết quả tốt và tiếp tục thử nghiệm để khoanh vùng cho kết quả tốt để lựa chọn siêu tham số. Ví dụ ta đã đi từ vùng lớn đến vùng nhỏ hơn trên ảnh.  
 
 3. **Hãy sử dụng thang đo thích hợp**   
+Với số Layer bạn có thể chọn 2,3,4,... nhưng ví dụ với anpha thì sao? Nếu bạn cho rằng anpha sẽ nằm trong khoảng 0.0001 đến 1? Nếu bạn chọn ngẫu nhiên, sẽ rao sao nếu anpha chỉ tập trung vào khoảng 0.1 đến 1? Hãy xem cách chọn thang đo cho anpha:  
+<img src ='https://i.imgur.com/SMLbGgC.jpg'>  
+Ở ví dụ trên, ta thực hiện 2 bước: chọn r ngẫu nhiên thuộc (-4, 0), sau đó chọn anpha = 10^ r. Việc lựa chọn như vậy khiến anpha trải đều hơn và tránh việc tập trung vào 1 khoảng không mong muốn.
 
 
