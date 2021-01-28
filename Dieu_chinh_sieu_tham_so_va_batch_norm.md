@@ -49,7 +49,10 @@ Từ z[l](i) ta xây dựng z-norm[l](i) như trên.
 Ta tính: z~[l](i) từ z-norm thông qua 2 tham số gamma và beta. Việc thêm 2 tham số này sẽ khiến cho z~ không gần 0 và hàm g(z) sẽ không gần tuyến tính như z-norm (đương nhiên là ta không muốn các lớp ẩn tuyến tính). z~ sẽ được sử dụng thay cho z khi thực hiện các tính toán về sau.
 
 3. **Batch Norm trong mô hình Neural Network**
+<img src ='https://i.imgur.com/Q4vBCXV.jpg'>  
 
+Ta dùng a[l-1] để tính z[l]; dùng z[l] để tính z~[l]; dùng z~[l] để tính a[l+1],....
+--> có các tham số: w, gamma, beta (xem cách xây dựng z-norm ta thấy b sẽ bị loại bỏ khi tính trung bình, nên tham số b thực sự không cần thiết trong mô hình).
 
 
 
