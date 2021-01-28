@@ -9,10 +9,16 @@
 **Việc ưu tiên điều chỉnh siêu tham số theo thứ tự 1 --> (2,3,4) --> (5,6). Và ít khi điều chỉnh các siêu tham số khi sử dụng ADAM**
 
 # Cách thử nghiệm các siêu tham số:  
-1. Hãy lấy mẫu ngẫu nhiên, không thử nghiệm theo mô hình lưới.   
+1. **Hãy lấy mẫu ngẫu nhiên, không thử nghiệm theo mô hình lưới.**   
 
 Ví dụ: Bạn cần thử 2 siêu tham số anpha và epsilon:    
 <img src ='https://i.imgur.com/4NlUe4w.jpg'>   
 Ở TH1 Bạn thử 2 siêu tham số theo mô hình lưới --> khi đó bạn chỉ thử được 5 mẫu của anpha, trong khi đó ở TH2, với việc lấy mẫu ngẫu nhiên, bạn sẽ thử được 25 giá trị của anpha.   
 
-2. Hãy sử dụng thang đo thích hợp
+2. **Đi từ thô đến tinh**   
+<img src ='https://i.imgur.com/T0ULWV4.jpg'>   
+Khi bạn thử nghiệm các siêu tham số hãy khoanh vùng giá trị cho kết quả tốt và tiếp tục thử nghiệm để khoanh vùng cho kết quả tốt để lựa chọn siêu tham số. Ví dụ ta đã đi từ vùng lớn đến vùng nhỏ hơn trên ảnh.  
+
+3. **Hãy sử dụng thang đo thích hợp**   
+
+
