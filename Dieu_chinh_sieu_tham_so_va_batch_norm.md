@@ -51,8 +51,19 @@ Ta tính: z~[l](i) từ z-norm thông qua 2 tham số gamma và beta. Việc th�
 3. **Batch Norm trong mô hình Neural Network**
 <img src ='https://i.imgur.com/Q4vBCXV.jpg'>  
 
-Ta dùng a[l-1] để tính z[l]; dùng z[l] để tính z~[l]; dùng z~[l] để tính a[l+1],....
+Ta dùng a[l-1] để tính z[l]; dùng z[l] để tính z~[l]; dùng z~[l] để tính a[l],....
 --> có các tham số: w, gamma, beta (xem cách xây dựng z-norm ta thấy b sẽ bị loại bỏ khi tính trung bình, nên tham số b thực sự không cần thiết trong mô hình).
+
+**Trong 1 mini-batch:**   
+<img src ='https://i.imgur.com/iclhHD9.jpg'>  
+
+4. **Batch Norm hoạt động ra sao?**   
+- Ví dụ với 1 lớp ẩn: a[3], ta thấy khi có BN(batch norm) a[3] sẽ thay đổi phụ thuộc theo w1,b1,w2,b2 nhưng sẽ tuân theo 1 phân phối nhất định phụ thuộc theo gamma, beta. Do đó BN làm cho các lớp ẩn ổn định hơn --> tăng tốc tính toán.
+- BN có chức năng regularization (ko phải chức năng chính, là 1 tác dụng ăn theo): BN trên mỗi mini-batch có độ nhiễu z-norm phụ thuộc theo từng mini-batch; việc z~ phụ thuộc vào gamma,beta khiến BN có tác dụng giống như Dropout, khi Dropout nhân với xác xuất xuất hiện 0, thì BN điều chuẩn theo gamma, beta.  
+5. **Trong thời kỳ kiểm tra test BN thực hiện ra sao?**
+- Trong thời kỳ kiểm tra BN sẽ không có nhiều dữ liệu để tạo 1 mini-batch, vi dụ ta chỉ kiểm tra 1 số ít đầu vào, khi đó các giá trị mu, sigma^2 được tính phụ thuộc theo mu, sigma^2 ở từng mini-batch để ước lượng y-hat, cụ thể như sau: 
+<img src ='https://i.imgur.com/OrEPcVn.jpg'>
+
 
 
 
