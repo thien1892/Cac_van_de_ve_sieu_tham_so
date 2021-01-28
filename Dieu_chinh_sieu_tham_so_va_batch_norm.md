@@ -26,6 +26,15 @@ Khi bạn thử nghiệm các siêu tham số hãy khoanh vùng giá trị cho k
 
 **VD2:** Ta hãy xem cách chọn beta (khi sử dụng trung bình động gradient descent):   
 <img src= 'https://i.imgur.com/d9HrOJ4.jpg'>   
-Khi chọn beta = 0.9000 đến beta = 0.9005 sẽ không có nhiều thay đổi, nhưng nếu beta = 0.999 đến 0.9995 thì sẽ ảnh hưởng lớn đến kết quả vì bạn đang thay đổi xem kết quả cuối cùng phụ thuộc vào 2000 giá trị trước thay vì 1000 giá trị trước đó.
+Khi chọn beta = 0.9000 đến beta = 0.9005 sẽ không có nhiều thay đổi, nhưng nếu beta = 0.999 đến 0.9995 thì sẽ ảnh hưởng lớn đến kết quả; vì bạn đang thay đổi xem kết quả cuối cùng phụ thuộc vào 2000 giá trị trước thay vì 1000 giá trị trước đó.   
+
+4. **Hãy định kỳ kiểm tra lại các siêu tham số**   
+Việc lựa chọn được các siêu tham số rất tốn thời gian, nhưng đừng vội hài lòng với mô hình của bạn, bởi vì khi dữ liệu đầu vào cho mô hình của bạn thay đổi hàng ngày --> các siêu tham số sẽ trở nên cũ kỹ và có thể không phù hợp --> do đó hãy định kỳ đánh giá lại mô hình cũng như các siêu tham số đã lựa chọn để xem xét chúng có phù hợp nữa hay không!!    
+5. **Hai cách phát triển mô hình: Panda và Caviar**
+<img src = 'https://i.imgur.com/5zcR797.jpg'>   
+
+**Panda:** Khi bạn không có nhiều tài nguyên CPU, GPU để xử lý, bạn trông nom mô hình hàng ngày, thay đổi để xem hàm mất mát giảm dần. Giống như Gấu trúc không có nhiều con, chúng trông nom con hàng ngày :))   
+**Caviar** Khi bạn thuộc dạng rick kid, thử một lúc nhiều mô hình và sau đó chọn mô hình phù hợp nhất, giống như cá hồi để hàng loạt trứng và sau đó một số trứng nở ra con.
+
 
 
