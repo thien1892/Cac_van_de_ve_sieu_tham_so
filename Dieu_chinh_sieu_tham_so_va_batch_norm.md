@@ -34,7 +34,15 @@ Việc lựa chọn được các siêu tham số rất tốn thời gian, nhưn
 <img src = 'https://i.imgur.com/5zcR797.jpg'>   
 
 **Panda:** Khi bạn không có nhiều tài nguyên CPU, GPU để xử lý, bạn trông nom mô hình hàng ngày, thay đổi để xem hàm mất mát giảm dần. Giống như Gấu trúc không có nhiều con, chúng trông nom con hàng ngày :))   
-**Caviar** Khi bạn thuộc dạng rick kid, thử một lúc nhiều mô hình và sau đó chọn mô hình phù hợp nhất, giống như cá hồi để hàng loạt trứng và sau đó một số trứng nở ra con.
+**Caviar** Khi bạn thuộc dạng rick kid, thử một lúc nhiều mô hình và sau đó chọn mô hình phù hợp nhất, giống như cá hồi để hàng loạt trứng và sau đó một số trứng nở ra con.  
+
+# Batch Norm
+1. **Nhắc lại về chuẩn hóa dữ liệu đầu vào:**
+<img src ='https://i.imgur.com/xXV34ge.jpg'>   
+
+- Chuẩn hóa dữ liệu đầu vào làm tăng quá trình học tập của mô hình. Câu hỏi đặt ra là: với các lớp ẩn, việc chuẩn hóa sẽ ra sao?  
+
+- Ví dụ chuẩn hóa a[2] có thúc đẩy nhanh quá trình tính toán w[3], b[3]? Và thường thì ta lựa chọn chuẩn hóa z[2] thay vì a[2]. Nếu có thể chuẩn hóa được thì việc chuẩn hóa đó như thế nào?
 
 
 
