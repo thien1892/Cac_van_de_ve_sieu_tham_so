@@ -43,6 +43,13 @@ Việc lựa chọn được các siêu tham số rất tốn thời gian, nhưn
 - Chuẩn hóa dữ liệu đầu vào làm tăng quá trình học tập của mô hình. Câu hỏi đặt ra là: với các lớp ẩn, việc chuẩn hóa sẽ ra sao?  
 
 - Ví dụ chuẩn hóa a[2] có thúc đẩy nhanh quá trình tính toán w[3], b[3]? Và thường thì ta lựa chọn chuẩn hóa z[2] thay vì a[2]. Nếu có thể chuẩn hóa được thì việc chuẩn hóa đó như thế nào?
+2. **Cách Batch Norm thực hiện ở 1 layer cụ thể**
+<img src ='https://i.imgur.com/680lu9y.jpg'>  
+Từ z[l](i) ta xây dựng z-norm[l](i) như trên.   
+Ta tính: z~[l](i) từ z-norm thông qua 2 tham số gamma và beta. Việc thêm 2 tham số này sẽ khiến cho z~ không gần 0 và hàm g(z) sẽ không gần tuyến tính như z-norm (đương nhiên là ta không muốn các lớp ẩn tuyến tính). z~ sẽ được sử dụng thay cho z khi thực hiện các tính toán về sau.
+
+3. **Batch Norm trong mô hình Neural Network**
+
 
 
 
